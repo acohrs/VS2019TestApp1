@@ -1,0 +1,15 @@
+﻿@page
+@model HandlersModel
+@{
+    ViewData["Title"] = "Handlers";
+}
+
+<h1>Handlers</h1>
+
+<p><a href="/Handlers" class="btn btn-default">Get</a></p>
+<form method="post"><button class="btn btn-default">Post</button></form>
+<form asp-page-handler="edit" method="post"><button class="btn btn-default">Edit</button></form>
+<form asp-page-handler="delete" method="post"><button class="btn btn-default">Delete</button></form>
+<form asp-page-handler="view" method="post"><button class="btn btn-default">View</button></form>
+<br />
+<h3>@Model.Message</h3>
