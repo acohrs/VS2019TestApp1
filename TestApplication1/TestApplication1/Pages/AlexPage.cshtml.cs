@@ -9,9 +9,16 @@ namespace TestApplication1.Pages
 {
     public class AlexPageModel : PageModel
     {
+        public string Message { get; set; } = "";
+       
         public void OnGet()
         {
 
+        }
+
+        public void OnPostTextFill()
+        {
+            //Message = Request.Form[""] 
         }
     }
 }
