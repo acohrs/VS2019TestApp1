@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Handlers";
 }
-
 <h1>Handlers</h1>
 
 <p><a href="/Handlers" class="btn btn-default">Get</a></p>
@@ -11,5 +10,12 @@
 <form asp-page-handler="edit" method="post"><button class="btn btn-default">Edit</button></form>
 <form asp-page-handler="delete" method="post"><button class="btn btn-default">Delete</button></form>
 <form asp-page-handler="view" method="post"><button class="btn btn-default">View</button></form>
-<br />
+
 <h3>@Model.Message</h3>
+
+<form asp-page-handler="text" method="post">
+    <input type="text" name="textInput" placeholder="Put sth here" value="" />
+    <input type="submit" name="submit" value="Submit" />
+</form>
+<br />
+<p>@Model.Message2</p>

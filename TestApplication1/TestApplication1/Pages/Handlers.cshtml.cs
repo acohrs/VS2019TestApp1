@@ -10,7 +10,7 @@ namespace TestApplication1.Pages
     public class HandlersModel : PageModel
     {
         public string Message { get; set; } = "";
-
+        public string Message2 { get; set; } = "";
         public void OnGet()
         {
             Message = "Get used";
@@ -35,5 +35,10 @@ namespace TestApplication1.Pages
             Message = "Delete used";
         }
 
+        public void OnPostText()
+        {
+            Message = "Text and Submit used";
+            Message2 = Request.Form["textInput"];
+        }
     }
 }
